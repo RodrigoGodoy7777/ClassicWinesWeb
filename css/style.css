@@ -1,10 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body{
     height: 100%;
+    box-sizing: border-box
 }
 
 body {
@@ -12,7 +14,7 @@ body {
     font-family: 'Radio Canada', sans-serif;
 }
 
-/* Cabeçario*/
+/* Header*/
 
 .header {
     width: 100%;
@@ -22,53 +24,69 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
 }
 
 .header h1 {
     font-family: 'Oleo Script Swash Caps', cursive;
-    margin-left: 30px;
     color: rgb(255, 255, 255);
     font-weight: 400;
 }
 
 .header h1 span {
-    position: relative;
     color: rgb(255, 255, 130);
-    left: -5px;
 }
 
+/* Header*/
 
-.menu li a{
-    text-decoration: none;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.menu li a::before{
-    content: '>';
-    margin-right: 5px;
-}
-
-.menu li a:hover {
-    font-weight: 600;
-    border-bottom: 2px solid yellow;
-    background-color: rgb(139, 0, 0);
-    
-}
-
-.menu li a:hover::before{
-    content: 'v';
-    margin-right: 5px;
-}
+/* Menu*/
 
 .menu {
     display: flex;
     list-style: none;
-    margin-right: 30px;
-    
 }
+
+.menu  li a{
+    text-decoration: none;
+    padding: 11px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+}
+
+.menu  li:hover {
+    font-weight: 600;
+    background-color: rgb(139, 0, 0);
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: rgb(124, 0, 0);
+    left: 0;
+    top: 48px;
+    width: 200px
+}
+
+
+
+
+
+
+
+
+
+
 
 /*---*/
 
